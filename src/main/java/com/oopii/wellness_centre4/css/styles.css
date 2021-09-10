@@ -1,0 +1,12 @@
+.welcome-page {
+-fx-background-image: url("../images/background.jpg");
+}
+
+.user-card {
+
+}
+
+#doctor-card {
+-fx-background-image: url("../images/doctor.png");	
+
+}
