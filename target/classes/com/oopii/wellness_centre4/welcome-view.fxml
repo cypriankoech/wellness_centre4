@@ -2,6 +2,8 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
@@ -27,6 +29,11 @@
         <children>
             <StackPane fx:id="doctorPane" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                 <children>
+               <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@images/doctor.png" />
+                  </image>
+               </ImageView>
                     <Rectangle id="doctor-card" fx:id="doctorCard" arcHeight="30.0" arcWidth="30.0" height="150.0" stroke="BLACK" strokeType="INSIDE" width="200.0">
                         <fill>
                             <LinearGradient endX="1.0" endY="1.0" startX="0.44711538461538464" startY="0.31730769230769235">
@@ -50,6 +57,11 @@
             </StackPane>
             <StackPane fx:id="patientPane" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                 <children>
+               <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@images/doctor.png" />
+                  </image>
+               </ImageView>
                     <Rectangle arcHeight="30.0" arcWidth="30.0" height="150.0" stroke="BLACK" strokeType="INSIDE" styleClass="user-card" width="200.0">
                         <fill>
                             <LinearGradient endX="1.0" endY="1.0" startX="0.44711538461538464" startY="0.31730769230769235">
