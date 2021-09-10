@@ -29,7 +29,7 @@
         <children>
             <StackPane fx:id="doctorPane" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                 <children>
-               <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <ImageView fitHeight="130.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true" StackPane.alignment="CENTER">
                   <image>
                      <Image url="@images/doctor.png" />
                   </image>
@@ -57,7 +57,7 @@
             </StackPane>
             <StackPane fx:id="patientPane" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                 <children>
-               <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <ImageView fitHeight="130.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true" StackPane.alignment="CENTER">
                   <image>
                      <Image url="@images/doctor.png" />
                   </image>
