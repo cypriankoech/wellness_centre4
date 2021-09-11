@@ -12,7 +12,7 @@ import java.util.Objects;
 
 public class WelcomePage extends Application {
     static Stage stage;
-    static String[] pages = {"welcome-page.fxml","doctor-page.fxml","patient-page.fxml"} ;
+    static String[] pages = {"welcome-page.fxml","login-page.fxml","doctor-page.fxml","patient-page.fxml"} ;
 
     @Override
     public void start(Stage stage) throws IOException {

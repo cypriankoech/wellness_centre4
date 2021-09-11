@@ -35,7 +35,7 @@
 	-fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.4) , 5, 0.0 , 0 , 1 );
 
 }
-.sidebar-btn:hover {
+.sidebar-btn:selected {
 	-fx-border-color: orangered;
 	-fx-background-color:#64EE64;
 	-fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.4) , 5, 0.0 , 0 , 1 );

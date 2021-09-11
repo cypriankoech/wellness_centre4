@@ -54,12 +54,12 @@ public class WelcomeController {
     @FXML
     void initialize() throws IOException {
         // Initialise doctor's page
-        Parent patient_page_root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource(WelcomePage.pages[2])));
+        Parent patient_page_root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource(WelcomePage.pages[3])));
         Scene patient_page = new Scene(patient_page_root, 800, 600);
         this.patient_page = patient_page;
 
         // Initialise patient's page
-        Parent doctor_page_root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource(WelcomePage.pages[1])));
+        Parent doctor_page_root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource(WelcomePage.pages[2])));
         Scene doctor_page = new Scene(doctor_page_root, 800, 600);
         this.doctor_page = doctor_page;
 

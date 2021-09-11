@@ -6,6 +6,7 @@ import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.ToggleButton;
 import javafx.scene.layout.Pane;
 
 public class DoctorPageController {
@@ -20,10 +21,11 @@ public class DoctorPageController {
     private Pane appointmentsPane, diagnosisPane, prescrPane, usersPane;
 
     @FXML
-    private Button appointmentsBtn, diagnosisBtn, prescriptionsBtn, usersBtn;
+    private ToggleButton appointmentsBtn, diagnosisBtn, prescriptionsBtn, usersBtn;
 
     @FXML
     private void docTabSwitcher(ActionEvent event) {
+        ToggleButton[] sideBarButtons = {appointmentsBtn, diagnosisBtn, prescriptionsBtn, usersBtn};
         if (event.getSource() == appointmentsBtn) {
             appointmentsPane.toFront();
 
@@ -38,9 +40,18 @@ public class DoctorPageController {
 
         }
 
+        for (ToggleButton sideBarButton: sideBarButtons) {
+            if (sideBarButton != event.getSource()) {
+                sideBarButton.setSelected(false);
+            }
+        }
+
     }
 
     @FXML
     void initialize() {
+        // start with appointments tab selected
+        appointmentsBtn.setSelected(true);
     }
 }
+
