@@ -2,6 +2,8 @@ package com.oopii.wellness_centre4;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.layout.Pane;
@@ -15,28 +17,28 @@ public class DoctorPageController {
     private URL location;
 
     @FXML
-    private Pane appointmentsPane;
+    private Pane appointmentsPane, diagnosisPane, prescrPane, usersPane;
 
     @FXML
-    private Pane diagnosisPane;
+    private Button appointmentsBtn, diagnosisBtn, prescriptionsBtn, usersBtn;
 
     @FXML
-    private Pane prescrPane;
+    private void docTabSwitcher(ActionEvent event) {
+        if (event.getSource() == appointmentsBtn) {
+            appointmentsPane.toFront();
 
-    @FXML
-    private Pane usersPane;
+        } else if (event.getSource() == diagnosisBtn) {
+            diagnosisPane.toFront();
 
-    @FXML
-    private Button appointmentsBtn;
+        } else if (event.getSource() == prescriptionsBtn) {
+            prescrPane.toFront();
 
-    @FXML
-    private Button diagnosisBtn;
+        } else if (event.getSource() == usersBtn) {
+            usersPane.toFront();
 
-    @FXML
-    private Button prescriptionsBtn;
+        }
 
-    @FXML
-    private Button usersBtn;
+    }
 
     @FXML
     void initialize() {
