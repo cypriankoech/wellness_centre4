@@ -38,23 +38,30 @@ public class WelcomeController {
 
     @FXML
     private Button todocLogInBtn,topatientLogInBtn;
+    private Scene patient_page, doctor_page;
 
 
     @FXML
     void todocLogIn(ActionEvent event) throws IOException {
-
-        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource(WelcomePage.pages[1])));
-        Scene doctor_page = new Scene(root, 800, 600);
         WelcomePage.stage.setScene(doctor_page);
-
     }
 
     @FXML
     void topatientLogIn(ActionEvent event) throws IOException {
-
-        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource(WelcomePage.pages[2])));
-        Scene patient_page = new Scene(root, 800, 600);
         WelcomePage.stage.setScene(patient_page);
+    }
+
+    @FXML
+    void initialize() throws IOException {
+        // Initialise doctor's page
+        Parent patient_page_root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource(WelcomePage.pages[2])));
+        Scene patient_page = new Scene(patient_page_root, 800, 600);
+        this.patient_page = patient_page;
+
+        // Initialise patient's page
+        Parent doctor_page_root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource(WelcomePage.pages[1])));
+        Scene doctor_page = new Scene(doctor_page_root, 800, 600);
+        this.doctor_page = doctor_page;
 
     }
 
