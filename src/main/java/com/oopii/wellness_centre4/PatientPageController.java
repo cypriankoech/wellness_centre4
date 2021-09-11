@@ -11,7 +11,7 @@ import javafx.scene.shape.SVGPath;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class PatientLoginController implements Initializable {
+public class PatientPageController implements Initializable {
 
     @FXML
     private Pane recordsPane;
