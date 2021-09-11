@@ -38,30 +38,32 @@ public class WelcomeController {
 
     @FXML
     private Button todocLogInBtn,topatientLogInBtn;
-    private Scene patient_page, doctor_page;
-
 
     @FXML
-    void todocLogIn(ActionEvent event) throws IOException {
-        WelcomePage.stage.setScene(doctor_page);
+    void toLogIn(ActionEvent event) throws IOException {
+        if (event.getSource() == todocLogInBtn) {
+            WelcomePage.stage.setScene(WelcomePage.login_page);
+            WelcomePage.current_page = "docLogin";
+
+        } else if (event.getSource() == topatientLogInBtn) {
+            WelcomePage.stage.setScene(WelcomePage.login_page);
+            WelcomePage.current_page = "patientLogin";
+
+        }
     }
 
     @FXML
-    void topatientLogIn(ActionEvent event) throws IOException {
-        WelcomePage.stage.setScene(patient_page);
+    void todocLogIn() throws IOException {
+        WelcomePage.stage.setScene(WelcomePage.doctor_page);
+    }
+
+    @FXML
+    void topatientLogIn() throws IOException {
+        WelcomePage.stage.setScene(WelcomePage.patient_page);
     }
 
     @FXML
     void initialize() throws IOException {
-        // Initialise doctor's page
-        Parent patient_page_root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource(WelcomePage.pages[3])));
-        Scene patient_page = new Scene(patient_page_root, 800, 600);
-        this.patient_page = patient_page;
-
-        // Initialise patient's page
-        Parent doctor_page_root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource(WelcomePage.pages[2])));
-        Scene doctor_page = new Scene(doctor_page_root, 800, 600);
-        this.doctor_page = doctor_page;
 
     }
 
