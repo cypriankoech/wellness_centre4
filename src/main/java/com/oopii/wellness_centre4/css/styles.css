@@ -6,6 +6,7 @@
     -fx-opacity: 1;
 }
 
+
 .appointments-icon {
 
 }
@@ -22,6 +23,9 @@
 
 }
 
+.user-card {
+    -fx-background-color: transparent;
+}
 .sidebar-btn {
--fx-background-color: transparent;
+    -fx-background-color: transparent;
 }

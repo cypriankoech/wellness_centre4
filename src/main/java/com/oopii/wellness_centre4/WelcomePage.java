@@ -11,17 +11,20 @@ import java.io.IOException;
 import java.util.Objects;
 
 public class WelcomePage extends Application {
+    static Stage stage;
+    static String[] pages = {"welcome-page.fxml","doctor-page.fxml","patient-page.fxml"} ;
+
     @Override
     public void start(Stage stage) throws IOException {
-        String[] pages = {"welcome-view.fxml","doctor-page.fxml"} ;
-        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource(pages[1])));
-        Scene scene = new Scene(root, 800, 600);
+        this.stage = stage;
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource(pages[0])));
+        Scene welcome_page = new Scene(root, 800, 600);
 
 
 
 
         stage.setTitle("Wellness Centre");
-        stage.setScene(scene);
+        stage.setScene(welcome_page);
         stage.setResizable(false);
 
         stage.show();
