@@ -2,11 +2,26 @@
 -fx-background-image: url("../images/background.jpg");
 }
 
-.user-card {
+#doctorCard:hover, #patientCard:hover {
+    -fx-opacity: 1;
+}
+
+.appointments-icon {
 
 }
 
-#doctor-card {
--fx-background-image: url("../images/doctor.png");	
+.diagnosis-icon {
 
+}
+
+.prescriptions-icon {
+
+}
+
+.users-icon {
+
+}
+
+.sidebar-btn {
+-fx-background-color: transparent;
 }

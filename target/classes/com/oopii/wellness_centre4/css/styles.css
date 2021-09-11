@@ -6,4 +6,22 @@
     -fx-opacity: 1;
 }
 
+.appointments-icon {
 
+}
+
+.diagnosis-icon {
+
+}
+
+.prescriptions-icon {
+
+}
+
+.users-icon {
+
+}
+
+.sidebar-btn {
+-fx-background-color: transparent;
+}

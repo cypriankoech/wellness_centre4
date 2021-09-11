@@ -13,7 +13,8 @@ import java.util.Objects;
 public class WelcomePage extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("doctor-page.fxml")));
+        String[] pages = {"doctor-page.fxml","welcome-view.fxml"} ;
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource(pages[0])));
         Scene scene = new Scene(root, 800, 600);
 
 

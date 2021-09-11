@@ -25,26 +25,26 @@
             </AnchorPane>
             <StackPane layoutY="89.0" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="46.0" prefWidth="222.0">
                <children>
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="45.0" stroke="BLACK" strokeType="INSIDE" width="45.0" StackPane.alignment="CENTER_LEFT" />
-                  <Button fx:id="appointmentsBtn" alignment="BASELINE_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="45.0" prefWidth="170.0" styleClass="appointments-icon" text="Appointments" StackPane.alignment="CENTER_RIGHT" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="45.0" stroke="BLACK" strokeType="INSIDE" styleClass="appointments-icon" width="45.0" StackPane.alignment="CENTER_LEFT" />
+                  <Button fx:id="appointmentsBtn" alignment="BASELINE_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="45.0" prefWidth="170.0" styleClass="sidebar-btn" stylesheets="@css/styles.css" text="Appointments" StackPane.alignment="CENTER_RIGHT" />
                </children>
             </StackPane>
             <StackPane layoutY="135.0" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="46.0" prefWidth="222.0">
                <children>
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="45.0" stroke="BLACK" strokeType="INSIDE" width="45.0" StackPane.alignment="CENTER_LEFT" />
-                  <Button fx:id="diagnosisBtn" alignment="BASELINE_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="45.0" prefWidth="170.0" styleClass="diagnosis-icon" text="Diagnosis" StackPane.alignment="CENTER_RIGHT" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="45.0" stroke="BLACK" strokeType="INSIDE" styleClass="diagnosis-icon" width="45.0" StackPane.alignment="CENTER_LEFT" />
+                  <Button fx:id="diagnosisBtn" alignment="BASELINE_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="45.0" prefWidth="170.0" styleClass="sidebar-btn" stylesheets="@css/styles.css" text="Diagnosis" StackPane.alignment="CENTER_RIGHT" />
                </children>
             </StackPane>
             <StackPane layoutY="181.0" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="46.0" prefWidth="222.0">
                <children>
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="45.0" stroke="BLACK" strokeType="INSIDE" width="45.0" StackPane.alignment="CENTER_LEFT" />
-                  <Button fx:id="prescriptionsBtn" alignment="BASELINE_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="45.0" prefWidth="170.0" styleClass="prescriptions-icon" text="Prescriptions" StackPane.alignment="CENTER_RIGHT" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="45.0" stroke="BLACK" strokeType="INSIDE" styleClass="prescriptions-icon" width="45.0" StackPane.alignment="CENTER_LEFT" />
+                  <Button fx:id="prescriptionsBtn" alignment="BASELINE_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="45.0" prefWidth="170.0" styleClass="sidebar-btn" stylesheets="@css/styles.css" text="Prescriptions" StackPane.alignment="CENTER_RIGHT" />
                </children>
             </StackPane>
             <StackPane layoutY="227.0" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="46.0" prefWidth="222.0">
                <children>
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="45.0" stroke="BLACK" strokeType="INSIDE" width="45.0" StackPane.alignment="CENTER_LEFT" />
-                  <Button fx:id="usersBtn" alignment="BASELINE_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="45.0" prefWidth="170.0" styleClass="users-icon" text="Users" StackPane.alignment="CENTER_RIGHT" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="45.0" stroke="BLACK" strokeType="INSIDE" styleClass="users-icon" width="45.0" StackPane.alignment="CENTER_LEFT" />
+                  <Button fx:id="usersBtn" alignment="BASELINE_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="45.0" prefWidth="170.0" styleClass="sidebar-btn" stylesheets="@css/styles.css" text="Users" StackPane.alignment="CENTER_RIGHT" />
                </children>
             </StackPane>
          </children>
