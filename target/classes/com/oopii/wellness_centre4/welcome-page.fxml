@@ -54,7 +54,7 @@
                         </fill>
                     </Rectangle>
                     <Label fx:id="doctorText" alignment="BOTTOM_CENTER" prefHeight="16.0" prefWidth="55.0" text="Doctor" StackPane.alignment="BOTTOM_CENTER" />
-               <Button fx:id="todocLogInBtn" mnemonicParsing="false" onAction="#todocLogIn" prefHeight="150.0" prefWidth="200.0" styleClass="user-card" stylesheets="@css/styles.css" />
+               <Button fx:id="todocLogInBtn" mnemonicParsing="false" onAction="#todocLogIn" prefHeight="213.0" prefWidth="230.0" styleClass="user-card" stylesheets="@css/styles.css" />
                 </children>
             </StackPane>
             <StackPane fx:id="patientPane" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
@@ -83,7 +83,7 @@
                         </fill>
                     </Rectangle>
                     <Label fx:id="patientText" alignment="BOTTOM_CENTER" prefHeight="16.0" prefWidth="55.0" text="Patient" StackPane.alignment="BOTTOM_CENTER" />
-               <Button fx:id="topatientLogInBtn" mnemonicParsing="false" onAction="#topatientLogIn" prefHeight="150.0" prefWidth="200.0" styleClass="user-card" stylesheets="@css/styles.css" />
+               <Button fx:id="topatientLogInBtn" mnemonicParsing="false" onAction="#topatientLogIn" prefHeight="208.0" prefWidth="230.0" style="-fx-border-radius: 30px;" styleClass="user-card" stylesheets="@css/styles.css" />
                 </children>
             </StackPane>
         </children>

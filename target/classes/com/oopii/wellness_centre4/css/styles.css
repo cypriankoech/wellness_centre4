@@ -3,7 +3,7 @@
 }
 
 #doctorCard:hover, #patientCard:hover {
-    -fx-opacity: 1;
+	-fx-stroke: orangered;
 }
 
 .appointments-icon {
@@ -27,6 +27,13 @@
 }
 .user-card {
 	-fx-background-color: transparent;
+}
+
+.user-card:hover {
+	-fx-border-radius: 20px;
+	-fx-border-color: orangered;
+	-fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.4) , 5, 0.0 , 0 , 1 );
+
 }
 .sidebar-btn:hover {
 	-fx-border-color: orangered;
