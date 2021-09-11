@@ -2,11 +2,8 @@
 -fx-background-image: url("../images/background.jpg");
 }
 
-.user-card {
-
+#doctorCard:hover, #patientCard:hover {
+    -fx-opacity: 1;
 }
 
-#doctor-card {
--fx-background-image: url("../images/doctor.png");	
 
-}

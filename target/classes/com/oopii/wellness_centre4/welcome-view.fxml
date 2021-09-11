@@ -34,7 +34,8 @@
                      <Image url="@images/doctor.png" />
                   </image>
                </ImageView>
-                    <Rectangle id="doctor-card" fx:id="doctorCard" arcHeight="30.0" arcWidth="30.0" height="150.0" stroke="BLACK" strokeType="INSIDE" width="200.0">
+                    <Label fx:id="doctorText" alignment="BOTTOM_CENTER" prefHeight="16.0" prefWidth="55.0" text="Doctor" StackPane.alignment="BOTTOM_CENTER" />
+                    <Rectangle id="doctor-card" fx:id="doctorCard" arcHeight="30.0" arcWidth="30.0" height="150.0" stroke="BLACK" strokeType="INSIDE" styleClass="user-card" width="200.0">
                         <fill>
                             <LinearGradient endX="1.0" endY="1.0" startX="0.44711538461538464" startY="0.31730769230769235">
                                 <stops>
@@ -52,7 +53,6 @@
                             </LinearGradient>
                         </fill>
                     </Rectangle>
-                    <Label fx:id="doctorText" alignment="BOTTOM_CENTER" prefHeight="16.0" prefWidth="55.0" text="Doctor" StackPane.alignment="BOTTOM_CENTER" />
                 </children>
             </StackPane>
             <StackPane fx:id="patientPane" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
@@ -62,7 +62,8 @@
                      <Image url="@images/doctor.png" />
                   </image>
                </ImageView>
-                    <Rectangle arcHeight="30.0" arcWidth="30.0" height="150.0" stroke="BLACK" strokeType="INSIDE" styleClass="user-card" width="200.0">
+                    <Label fx:id="patientText" alignment="BOTTOM_CENTER" prefHeight="16.0" prefWidth="55.0" text="Patient" StackPane.alignment="BOTTOM_CENTER" />
+                    <Rectangle fx:id="patientCard" arcHeight="30.0" arcWidth="30.0" height="150.0" stroke="BLACK" strokeType="INSIDE" styleClass="user-card" width="200.0">
                         <fill>
                             <LinearGradient endX="1.0" endY="1.0" startX="0.44711538461538464" startY="0.31730769230769235">
                                 <stops>
@@ -80,7 +81,6 @@
                             </LinearGradient>
                         </fill>
                     </Rectangle>
-                    <Label fx:id="patientText" alignment="BOTTOM_CENTER" prefHeight="16.0" prefWidth="55.0" text="Patient" StackPane.alignment="BOTTOM_CENTER" />
                 </children>
             </StackPane>
         </children>
