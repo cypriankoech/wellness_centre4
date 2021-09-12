@@ -10,6 +10,7 @@ module com.oopii.wellness_centre4 {
     requires org.kordamp.bootstrapfx.core;
     requires eu.hansolo.tilesfx;
     requires jfoenix;
+    requires java.sql;
 
     opens com.oopii.wellness_centre4 to javafx.fxml;
     exports com.oopii.wellness_centre4;
