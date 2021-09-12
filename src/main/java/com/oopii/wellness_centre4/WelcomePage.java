@@ -42,7 +42,7 @@ public class WelcomePage extends Application {
 
         // Initialise patient's page
         Parent patient_page_root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource(WelcomePage.pages[3])));
-        Scene patient_page = new Scene(patient_page_root, 800, 600);
+        Scene patient_page = new Scene(patient_page_root, 700, 500);
         this.patient_page = patient_page;
 
     }
