@@ -1,23 +1,126 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
 <?import javafx.scene.control.ToggleButton?>
 <?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.shape.Rectangle?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.oopii.wellness_centre4.DoctorPageController">
    <children>
-      <AnchorPane layoutX="221.0" layoutY="2.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="781.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <AnchorPane layoutX="221.0" layoutY="2.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="781.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="219.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Pane id="prescrPane" fx:id="prescrPane" layoutX="2.0" maxHeight="-Infinity" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="778.0" style="-fx-background-color: #6ab2ca;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-            <Pane id="diagnosisPane" fx:id="diagnosisPane" layoutX="2.0" maxHeight="-Infinity" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="779.0" style="-fx-background-color: #ffc34d;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-            <Pane id="usersPane" fx:id="usersPane" layoutX="1.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="778.0" style="-fx-background-color: #436b95;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <Pane id="usersPane" fx:id="editUsersPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="778.0" style="-fx-background-color: #F5F8F7;">
+               <children>
+                  <Label layoutX="279.0" layoutY="14.0" nodeOrientation="RIGHT_TO_LEFT" text="User Type">
+                     <graphic>
+                        <ChoiceBox prefWidth="150.0" />
+                     </graphic>
+                  </Label>
+                  <GridPane alignment="CENTER" layoutX="77.0" layoutY="38.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="324.0" prefWidth="625.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="283.0" minWidth="10.0" prefWidth="283.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="283.0" minWidth="10.0" prefWidth="283.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label nodeOrientation="RIGHT_TO_LEFT" prefHeight="27.0" prefWidth="285.0" text="First Name" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                           <graphic>
+                              <TextField nodeOrientation="LEFT_TO_RIGHT" />
+                           </graphic>
+                        </Label>
+                        <Label nodeOrientation="RIGHT_TO_LEFT" prefHeight="27.0" prefWidth="285.0" text="Gender" GridPane.rowIndex="1">
+                           <graphic>
+                              <TextField alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" />
+                           </graphic>
+                        </Label>
+                        <Label nodeOrientation="RIGHT_TO_LEFT" prefHeight="27.0" prefWidth="285.0" text="Email" GridPane.rowIndex="2">
+                           <graphic>
+                              <TextField nodeOrientation="LEFT_TO_RIGHT" />
+                           </graphic>
+                        </Label>
+                        <Label nodeOrientation="RIGHT_TO_LEFT" prefHeight="27.0" prefWidth="285.0" text="Username" GridPane.rowIndex="3">
+                           <graphic>
+                              <TextField nodeOrientation="LEFT_TO_RIGHT" />
+                           </graphic>
+                        </Label>
+                        <Label nodeOrientation="RIGHT_TO_LEFT" prefHeight="27.0" prefWidth="324.0" text="Last Name" GridPane.columnIndex="1">
+                           <graphic>
+                              <TextField nodeOrientation="LEFT_TO_RIGHT" />
+                           </graphic>
+                        </Label>
+                        <Label nodeOrientation="RIGHT_TO_LEFT" prefHeight="27.0" prefWidth="285.0" text="D.O.B" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <graphic>
+                              <TextField nodeOrientation="LEFT_TO_RIGHT" />
+                           </graphic>
+                        </Label>
+                        <Label nodeOrientation="RIGHT_TO_LEFT" prefHeight="27.0" prefWidth="285.0" text="Phone" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <graphic>
+                              <TextField nodeOrientation="LEFT_TO_RIGHT" />
+                           </graphic>
+                        </Label>
+                        <Label nodeOrientation="RIGHT_TO_LEFT" prefHeight="27.0" prefWidth="285.0" text="Password" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                           <graphic>
+                              <TextField nodeOrientation="LEFT_TO_RIGHT" />
+                           </graphic>
+                        </Label>
+                     </children>
+                  </GridPane>
+                  <Button layoutX="146.0" layoutY="362.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="527.0" text="ADD" />
+                  <TitledPane animated="false" layoutX="8.0" layoutY="401.0" prefHeight="190.0" prefWidth="769.0" text="Remove User">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="165.0" prefWidth="246.0">
+                           <children>
+                              <Label layoutX="164.0" layoutY="2.0" nodeOrientation="RIGHT_TO_LEFT" text="User Type">
+                                 <graphic>
+                                    <ChoiceBox prefWidth="150.0" />
+                                 </graphic>
+                              </Label>
+                              <Label layoutX="398.0" layoutY="2.0" nodeOrientation="RIGHT_TO_LEFT" text="User ID">
+                                 <graphic>
+                                    <ChoiceBox prefWidth="150.0" />
+                                 </graphic>
+                              </Label>
+                              <TableView layoutX="11.4" layoutY="71.4" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="71.0" prefWidth="769.0" AnchorPane.bottomAnchor="33.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="-3.0" AnchorPane.topAnchor="30.0">
+                                 <columns>
+                                    <TableColumn prefWidth="60.999998450279236" text="#" />
+                                    <TableColumn minWidth="0.0" prefWidth="88.00000762939453" text="Fname" />
+                                    <TableColumn prefWidth="89.00003051757812" text="Lname" />
+                                    <TableColumn prefWidth="86.0" text="Gender" />
+                                    <TableColumn prefWidth="82.0" text="DOB" />
+                                    <TableColumn minWidth="0.0" prefWidth="60.0" text="Phone" />
+                                    <TableColumn minWidth="0.0" prefWidth="79.99996948242188" text="Email" />
+                                    <TableColumn minWidth="0.0" prefWidth="105.0" text="Username" />
+                                    <TableColumn prefWidth="95.0" text="Password" />
+                                 </columns>
+                              </TableView>
+                              <Button layoutX="355.0" layoutY="127.0" mnemonicParsing="false" text="Remove" />
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </TitledPane>
+               </children>
+            </Pane>
+            <Pane id="usersPane" fx:id="usersPane" layoutX="1.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="778.0" style="-fx-background-color: #F5F8F7;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                <children>
                   <TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="778.0" tabClosingPolicy="UNAVAILABLE" tabMaxHeight="60.0">
                     <tabs>
@@ -27,27 +130,92 @@
                                  <children>
                                     <TableView maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                        <columns>
-                                          <TableColumn prefWidth="91.0" text="Patient ID" />
-                                          <TableColumn minWidth="0.0" prefWidth="97.0" text="Category" />
-                                          <TableColumn prefWidth="85.0" text="Date" />
-                                          <TableColumn prefWidth="127.0" text="Start Time" />
-                                          <TableColumn prefWidth="178.0" text="Actios" />
+                                          <TableColumn prefWidth="91.0" text="#" />
+                                          <TableColumn minWidth="0.0" prefWidth="97.0" text="Fname" />
+                                          <TableColumn prefWidth="85.0" text="Lname" />
+                                          <TableColumn prefWidth="79.0" text="Gender" />
+                                          <TableColumn prefWidth="84.0" text="DOB" />
+                                          <TableColumn prefWidth="84.0" text="Phone" />
+                                          <TableColumn prefWidth="84.0" text="Email" />
+                                          <TableColumn prefWidth="84.0" text="Username" />
+                                          <TableColumn prefWidth="84.0" text="Password" />
                                        </columns>
                                     </TableView>
                                  </children>
                               </AnchorPane>
                         </content>
                       </Tab>
-                      <Tab text="Doctors">
-                        <content>
-                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-                        </content>
-                      </Tab>
+                        <Tab text="Doctors">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <TableView maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <columns>
+                                          <TableColumn prefWidth="91.0" text="#" />
+                                          <TableColumn minWidth="0.0" prefWidth="97.0" text="Fname" />
+                                          <TableColumn prefWidth="85.0" text="Lname" />
+                                          <TableColumn prefWidth="79.0" text="Gender" />
+                                          <TableColumn prefWidth="84.0" text="DOB" />
+                                          <TableColumn prefWidth="84.0" text="Phone" />
+                                          <TableColumn prefWidth="84.0" text="Email" />
+                                          <TableColumn prefWidth="84.0" text="Username" />
+                                          <TableColumn prefWidth="84.0" text="Password" />
+                                       </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
                     </tabs>
                   </TabPane>
                </children>
             </Pane>
-            <Pane id="appointmentsPane" fx:id="appointmentsPane" layoutX="2.0" maxHeight="-Infinity" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="778.0" style="-fx-background-color: #006600;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <Pane id="prescrPane" fx:id="prescrPane" layoutX="2.0" maxHeight="-Infinity" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="778.0" style="-fx-background-color: #F5F8F7;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <TabPane layoutX="14.0" layoutY="56.0" prefHeight="425.0" prefWidth="716.0" style="-fx-border-radius: 45px;" tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                      <Tab text="Prescription">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <TextArea layoutX="-4.0" layoutY="32.0" prefHeight="394.0" prefWidth="751.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                      </Tab>
+                    </tabs>
+                  </TabPane>
+                  <Label layoutX="15.0" layoutY="14.0" nodeOrientation="RIGHT_TO_LEFT" text="Patient ID">
+                     <graphic>
+                        <ChoiceBox prefHeight="24.0" prefWidth="290.0" />
+                     </graphic>
+                  </Label>
+                  <Button layoutX="665.0" layoutY="501.0" mnemonicParsing="false" text="Submit" />
+               </children></Pane>
+            <Pane id="prescrPane" fx:id="diagnosisPane" layoutX="3.0" maxHeight="-Infinity" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="778.0" style="-fx-background-color: #F5F8F7;">
+               <children>
+                  <TabPane layoutX="14.0" layoutY="56.0" prefHeight="425.0" prefWidth="716.0" style="-fx-border-radius: 45px;" tabClosingPolicy="UNAVAILABLE">
+                     <tabs>
+                        <Tab text="Diagnosis">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <TextArea layoutX="-4.0" layoutY="32.0" prefHeight="394.0" prefWidth="751.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
+                     </tabs>
+                  </TabPane>
+                  <Label layoutX="15.0" layoutY="14.0" nodeOrientation="RIGHT_TO_LEFT" text="Patient ID">
+                     <graphic>
+                        <ChoiceBox prefHeight="24.0" prefWidth="290.0" />
+                     </graphic>
+                  </Label>
+                  <Button layoutX="665.0" layoutY="501.0" mnemonicParsing="false" text="Submit" />
+               </children>
+            </Pane>
+            <Pane id="appointmentsPane" fx:id="appointmentsPane" layoutX="2.0" maxHeight="-Infinity" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="778.0" style="-fx-background-color: #F5F8F7;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                <children>
                   <TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="781.0" tabClosingPolicy="UNAVAILABLE">
                     <tabs>
@@ -57,11 +225,11 @@
                                  <children>
                                     <TableView layoutX="6.0" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                       <columns>
-                                        <TableColumn prefWidth="91.0" text="Patient ID" />
-                                        <TableColumn minWidth="0.0" prefWidth="97.0" text="Category" />
-                                          <TableColumn prefWidth="85.0" text="Date" />
-                                          <TableColumn prefWidth="127.0" text="Start Time" />
-                                          <TableColumn prefWidth="178.0" text="Actios" />
+                                        <TableColumn prefWidth="66.0" text="#" />
+                                        <TableColumn minWidth="0.0" prefWidth="122.0" text="Category" />
+                                          <TableColumn prefWidth="130.0" text="Date" />
+                                          <TableColumn prefWidth="223.0" text="Start Time" />
+                                          <TableColumn prefWidth="239.0" text="Actions" />
                                       </columns>
                                     </TableView>
                                  </children>
@@ -74,11 +242,11 @@
                                  <children>
                                     <TableView layoutX="6.0" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="579.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                        <columns>
-                                          <TableColumn prefWidth="136.0" text="Patient Name" />
-                                          <TableColumn minWidth="0.0" prefWidth="130.0" text="Category" />
-                                          <TableColumn prefWidth="101.0" text="Date" />
-                                          <TableColumn prefWidth="83.0" text="Start Time" />
-                                          <TableColumn prefWidth="128.0" text="Actios" />
+                                          <TableColumn prefWidth="93.0" text="#" />
+                                          <TableColumn minWidth="0.0" prefWidth="140.0" text="Category" />
+                                          <TableColumn prefWidth="136.0" text="Date" />
+                                          <TableColumn prefWidth="193.0" text="Start Time" />
+                                          <TableColumn prefWidth="218.0" text="Actios" />
                                        </columns>
                                     </TableView>
                                  </children>
@@ -91,11 +259,11 @@
                                  <children>
                                     <TableView layoutX="240.0" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="569.0" prefWidth="1000.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                        <columns>
-                                          <TableColumn prefWidth="136.0" text="Patient Name" />
-                                          <TableColumn minWidth="0.0" prefWidth="130.0" text="Category" />
-                                          <TableColumn prefWidth="101.0" text="Date" />
-                                          <TableColumn prefWidth="83.0" text="Start Time" />
-                                          <TableColumn prefWidth="128.0" text="Ed Time" />
+                                          <TableColumn prefWidth="68.0" text="#" />
+                                          <TableColumn minWidth="0.0" prefWidth="198.0" text="Category" />
+                                          <TableColumn prefWidth="148.0" text="Date" />
+                                          <TableColumn prefWidth="182.0" text="Start Time" />
+                                          <TableColumn prefWidth="184.0" text="End Time" />
                                        </columns>
                                     </TableView>
                                  </children>
@@ -129,7 +297,13 @@
             <StackPane layoutY="227.0" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="46.0" prefWidth="222.0" AnchorPane.leftAnchor="0.0">
                <children>
                   <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="45.0" stroke="BLACK" strokeType="INSIDE" styleClass="users-icon" width="45.0" StackPane.alignment="CENTER_LEFT" />
-                  <ToggleButton fx:id="usersBtn" alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#docTabSwitcher" prefHeight="45.0" prefWidth="170.0" styleClass="sidebar-btn" stylesheets="@css/styles.css" text="Users" StackPane.alignment="CENTER_RIGHT" />
+                  <ToggleButton fx:id="usersBtn" alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#docTabSwitcher" prefHeight="45.0" prefWidth="170.0" styleClass="sidebar-btn" stylesheets="@css/styles.css" text="View Users" StackPane.alignment="CENTER_RIGHT" />
+               </children>
+            </StackPane>
+            <StackPane layoutY="273.0" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="46.0" prefWidth="222.0">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="45.0" stroke="BLACK" strokeType="INSIDE" styleClass="users-icon" width="45.0" StackPane.alignment="CENTER_LEFT" />
+                  <ToggleButton fx:id="editUsersBtn" alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#docTabSwitcher" prefHeight="45.0" prefWidth="170.0" styleClass="sidebar-btn" stylesheets="@css/styles.css" text="Edit Users" StackPane.alignment="CENTER_RIGHT" />
                </children>
             </StackPane>
          </children>

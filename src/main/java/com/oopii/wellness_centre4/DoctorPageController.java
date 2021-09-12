@@ -18,14 +18,14 @@ public class DoctorPageController {
     private URL location;
 
     @FXML
-    private Pane appointmentsPane, diagnosisPane, prescrPane, usersPane;
+    private Pane appointmentsPane, diagnosisPane, prescrPane, usersPane, editUsersPane;
 
     @FXML
-    private ToggleButton appointmentsBtn, diagnosisBtn, prescriptionsBtn, usersBtn;
+    private ToggleButton appointmentsBtn, diagnosisBtn, prescriptionsBtn, usersBtn,editUsersBtn;
 
     @FXML
     private void docTabSwitcher(ActionEvent event) {
-        ToggleButton[] sideBarButtons = {appointmentsBtn, diagnosisBtn, prescriptionsBtn, usersBtn};
+        ToggleButton[] sideBarButtons = {appointmentsBtn, diagnosisBtn, prescriptionsBtn, usersBtn, editUsersBtn};
         if (event.getSource() == appointmentsBtn) {
             appointmentsPane.toFront();
 
@@ -38,9 +38,12 @@ public class DoctorPageController {
         } else if (event.getSource() == usersBtn) {
             usersPane.toFront();
 
+        } else if (event.getSource() == editUsersBtn) {
+            editUsersPane.toFront();
+
         }
 
-        for (ToggleButton sideBarButton: sideBarButtons) {
+            for (ToggleButton sideBarButton: sideBarButtons) {
             if (sideBarButton != event.getSource()) {
                 sideBarButton.setSelected(false);
             }
