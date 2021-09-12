@@ -222,6 +222,9 @@ public class PatientPageController implements Initializable {
         SVGPath icon = new SVGPath();
         icon.setContent(svgData);
         svgRegion.setShape(icon);
+        svgRegion.setMinSize(20, 20);
+        svgRegion.setPrefSize(25, 25);
+        svgRegion.setMaxSize(30, 30);
         svgRegion.setStyle("-fx-background-color: " + color);
         System.out.println("svgRegion" + svgRegion);
         return svgRegion;
