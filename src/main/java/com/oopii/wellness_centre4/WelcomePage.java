@@ -27,7 +27,7 @@ public class WelcomePage extends Application {
 
         stage.setTitle("Wellness Centre");
         stage.setScene(welcome_page);
-        stage.setResizable(false);
+//        stage.setResizable(false);
         stage.show();
 
         // Initialise Login page
@@ -37,7 +37,7 @@ public class WelcomePage extends Application {
 
         // Initialise doctor's page
         Parent doctor_page_root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource(WelcomePage.pages[2])));
-        Scene doctor_page = new Scene(doctor_page_root, 800, 600);
+        Scene doctor_page = new Scene(doctor_page_root, 1000, 600);
         this.doctor_page = doctor_page;
 
         // Initialise patient's page

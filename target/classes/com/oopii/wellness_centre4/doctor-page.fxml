@@ -11,19 +11,31 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.shape.Rectangle?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.oopii.wellness_centre4.DoctorPageController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.oopii.wellness_centre4.DoctorPageController">
    <children>
-      <AnchorPane layoutX="209.0" layoutY="2.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <AnchorPane layoutX="221.0" layoutY="2.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="781.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Pane id="diagnosisPane" fx:id="diagnosisPane" layoutX="223.0" maxHeight="-Infinity" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="579.0" style="-fx-background-color: #ffc34d;" />
-            <Pane id="prescrPane" fx:id="prescrPane" layoutX="223.0" maxHeight="-Infinity" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="579.0" style="-fx-background-color: #6ab2ca;" />
-            <Pane id="usersPane" fx:id="usersPane" layoutX="223.0" maxHeight="-Infinity" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="579.0" style="-fx-background-color: #436b95;">
+            <Pane id="prescrPane" fx:id="prescrPane" layoutX="2.0" maxHeight="-Infinity" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="778.0" style="-fx-background-color: #6ab2ca;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+            <Pane id="diagnosisPane" fx:id="diagnosisPane" layoutX="2.0" maxHeight="-Infinity" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="779.0" style="-fx-background-color: #ffc34d;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+            <Pane id="usersPane" fx:id="usersPane" layoutX="1.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="778.0" style="-fx-background-color: #436b95;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                <children>
-                  <TabPane maxHeight="-Infinity" minHeight="-Infinity" prefHeight="600.0" prefWidth="579.0" tabClosingPolicy="UNAVAILABLE" tabMaxHeight="60.0">
+                  <TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="778.0" tabClosingPolicy="UNAVAILABLE" tabMaxHeight="60.0">
                     <tabs>
                       <Tab text="Patients">
                         <content>
-                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <TableView maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <columns>
+                                          <TableColumn prefWidth="91.0" text="Patient ID" />
+                                          <TableColumn minWidth="0.0" prefWidth="97.0" text="Category" />
+                                          <TableColumn prefWidth="85.0" text="Date" />
+                                          <TableColumn prefWidth="127.0" text="Start Time" />
+                                          <TableColumn prefWidth="178.0" text="Actios" />
+                                       </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
                         </content>
                       </Tab>
                       <Tab text="Doctors">
@@ -35,23 +47,67 @@
                   </TabPane>
                </children>
             </Pane>
-            <Pane id="appointmentsPane" fx:id="appointmentsPane" layoutX="223.0" maxHeight="-Infinity" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="579.0" style="-fx-background-color: #006600;">
+            <Pane id="appointmentsPane" fx:id="appointmentsPane" layoutX="2.0" maxHeight="-Infinity" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="778.0" style="-fx-background-color: #006600;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                <children>
-                  <TableView prefHeight="200.0" prefWidth="200.0">
-                    <columns>
-                      <TableColumn prefWidth="75.0" text="C1" />
-                      <TableColumn prefWidth="75.0" text="C2" />
-                    </columns>
-                  </TableView>
+                  <TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="781.0" tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                      <Tab text="Pending">
+                        <content>
+                          <AnchorPane maxHeight="-Infinity" minHeight="-Infinity" minWidth="0.0" prefHeight="600.0" prefWidth="692.0">
+                                 <children>
+                                    <TableView layoutX="6.0" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                      <columns>
+                                        <TableColumn prefWidth="91.0" text="Patient ID" />
+                                        <TableColumn minWidth="0.0" prefWidth="97.0" text="Category" />
+                                          <TableColumn prefWidth="85.0" text="Date" />
+                                          <TableColumn prefWidth="127.0" text="Start Time" />
+                                          <TableColumn prefWidth="178.0" text="Actios" />
+                                      </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                      </Tab>
+                        <Tab text="Ongoing">
+                           <content>
+                              <AnchorPane maxHeight="-Infinity" minHeight="-Infinity" minWidth="0.0" prefHeight="600.0" prefWidth="910.0">
+                                 <children>
+                                    <TableView layoutX="6.0" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="579.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <columns>
+                                          <TableColumn prefWidth="136.0" text="Patient Name" />
+                                          <TableColumn minWidth="0.0" prefWidth="130.0" text="Category" />
+                                          <TableColumn prefWidth="101.0" text="Date" />
+                                          <TableColumn prefWidth="83.0" text="Start Time" />
+                                          <TableColumn prefWidth="128.0" text="Actios" />
+                                       </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
+                      <Tab text="Completed">
+                        <content>
+                          <AnchorPane maxHeight="-Infinity" minHeight="-Infinity" minWidth="0.0" prefHeight="569.0" prefWidth="905.0">
+                                 <children>
+                                    <TableView layoutX="240.0" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="569.0" prefWidth="1000.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <columns>
+                                          <TableColumn prefWidth="136.0" text="Patient Name" />
+                                          <TableColumn minWidth="0.0" prefWidth="130.0" text="Category" />
+                                          <TableColumn prefWidth="101.0" text="Date" />
+                                          <TableColumn prefWidth="83.0" text="Start Time" />
+                                          <TableColumn prefWidth="128.0" text="Ed Time" />
+                                       </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                      </Tab>
+                    </tabs>
+                  </TabPane>
                </children></Pane>
          </children></AnchorPane>
-      <AnchorPane layoutY="-2.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="610.0" prefWidth="222.0" style="-fx-background-color: #F0F7FF;" AnchorPane.bottomAnchor="-8.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="578.0" AnchorPane.topAnchor="-2.0">
+      <AnchorPane layoutY="-2.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="610.0" prefWidth="222.0" style="-fx-background-color: #F0F7FF;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <AnchorPane layoutX="1.0" layoutY="2.0" prefHeight="610.0" prefWidth="50.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="-8.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="578.0" AnchorPane.topAnchor="-2.0">
-               <effect>
-                  <DropShadow />
-               </effect>
-            </AnchorPane>
             <StackPane layoutY="89.0" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="46.0" prefWidth="222.0">
                <children>
                   <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="45.0" stroke="BLACK" strokeType="INSIDE" styleClass="appointments-icon" width="45.0" StackPane.alignment="CENTER_LEFT" />
@@ -70,7 +126,7 @@
                   <ToggleButton fx:id="prescriptionsBtn" alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#docTabSwitcher" prefHeight="45.0" prefWidth="170.0" styleClass="sidebar-btn" stylesheets="@css/styles.css" text="Prescriptions" StackPane.alignment="CENTER_RIGHT" />
                </children>
             </StackPane>
-            <StackPane layoutY="227.0" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="46.0" prefWidth="222.0">
+            <StackPane layoutY="227.0" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="46.0" prefWidth="222.0" AnchorPane.leftAnchor="0.0">
                <children>
                   <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="45.0" stroke="BLACK" strokeType="INSIDE" styleClass="users-icon" width="45.0" StackPane.alignment="CENTER_LEFT" />
                   <ToggleButton fx:id="usersBtn" alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#docTabSwitcher" prefHeight="45.0" prefWidth="170.0" styleClass="sidebar-btn" stylesheets="@css/styles.css" text="Users" StackPane.alignment="CENTER_RIGHT" />
@@ -79,7 +135,8 @@
          </children>
          <effect>
             <DropShadow />
-         </effect></AnchorPane>
+         </effect>
+      </AnchorPane>
 
    </children>
 </AnchorPane>
