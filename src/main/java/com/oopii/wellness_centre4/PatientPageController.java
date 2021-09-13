@@ -217,16 +217,19 @@ public class PatientPageController implements Initializable {
 
     }
 
-    Region createRegionIcon(String svgData, String color){
+    private  static Region createRegionIcon(String svgData, String color){
         Region svgRegion = new Region();
         SVGPath icon = new SVGPath();
+
         icon.setContent(svgData);
         svgRegion.setShape(icon);
-        svgRegion.setMinSize(20, 20);
-        svgRegion.setPrefSize(25, 25);
-        svgRegion.setMaxSize(30, 30);
+
+        svgRegion.setMinSize(20.0, 20.0);
+        svgRegion.setPrefSize(25.0, 25.0);
+        svgRegion.setMaxSize(30.0, 30.0);
         svgRegion.setStyle("-fx-background-color: " + color);
         System.out.println("svgRegion" + svgRegion);
+
         return svgRegion;
     }
 
