@@ -1,15 +1,17 @@
 package com.oopii.wellness_centre4;
 
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
+import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.Region;
 import javafx.scene.shape.SVGPath;
 
 import java.net.URL;
+import java.util.Calendar;
 import java.util.Hashtable;
 import java.util.ResourceBundle;
 
@@ -68,7 +70,6 @@ public class PatientPageController implements Initializable {
     @FXML
     private Region addressSVGRegion;
 
-
     @FXML
     private Label nameLabel;
 
@@ -90,6 +91,53 @@ public class PatientPageController implements Initializable {
     @FXML
     private Label genderLabel;
 
+    //BookNow Panel Components
+    @FXML
+    private ChoiceBox<String> doctorChoiceBox;
+
+    @FXML
+    private ChoiceBox<String> specialistChoiceBox;
+
+    @FXML
+    private ChoiceBox<String> dayChoiceBox;
+
+    @FXML
+    private ChoiceBox<String> yearChoiceBox;
+
+    @FXML
+    private ChoiceBox<String> monthChoiceBox;
+
+    @FXML
+    private ChoiceBox<String> hourChoiceBox;
+
+    @FXML
+    private ChoiceBox<String> minuteChoiceBox;
+
+    @FXML
+    private Button bookBtn;
+
+    //Records Panel
+    @FXML
+    private TableView<Record> recordsTable;
+
+    @FXML
+    private TableColumn<Record, Integer> appointmentIdColumn;
+
+    @FXML
+    private TableColumn<Record, String> doctorColumn;
+
+    @FXML
+    private TableColumn<Record, String> categoryColumn;
+
+    @FXML
+    private TableColumn<Record, String> dateColumn;
+
+    @FXML
+    private TableColumn<Record, String> timeColumn;
+
+    @FXML
+    private TableColumn<Record, String> statusColumn;
+
 
 
     @Override
@@ -97,6 +145,14 @@ public class PatientPageController implements Initializable {
 
         loadSVGIcons();
         loadProfileData();
+        setSpecialistChoiceBox();
+        setDoctorChoiceBox();
+        setDayChoiceBox();
+        setMonthChoiceBox();
+        setYearChoiceBox();
+        setMinuteChoiceBox();
+        setHourChoiceBox();
+        showRecords();
     }
 
     @FXML
@@ -111,6 +167,21 @@ public class PatientPageController implements Initializable {
         }
     }
 
+    @FXML
+    //Passes the information entered into BookNowPanelController.upload() to upload to the database
+    private void handleBookButtonAction(ActionEvent event) {
+        Hashtable<String, String> bookingInfo = new Hashtable<String, String>();
+        bookingInfo.put("specialist", specialistChoiceBox.getValue());
+        bookingInfo.put("doctor", doctorChoiceBox.getValue());
+        bookingInfo.put("year", yearChoiceBox.getValue());
+        bookingInfo.put("month", monthChoiceBox.getValue());
+        bookingInfo.put("date", dayChoiceBox.getValue());
+        bookingInfo.put("hour", hourChoiceBox.getValue());
+        bookingInfo.put("minute", minuteChoiceBox.getValue());
+
+        BookNowPanelController.uploadBookingInfo(bookingInfo);
+    }
+
     //Gets profile information from a function in PatientProfilePanelController class
     private void loadProfileData(){
         Hashtable profileData;
@@ -122,6 +193,60 @@ public class PatientPageController implements Initializable {
         patientIdLabel.setText((String) profileData.get("patientId"));
         phoneNumberLabel.setText((String) profileData.get("phoneNumber"));
         emailAddressLabel.setText((String) profileData.get("email"));
+    }
+
+    //Sets the children for the specialist choiceBox
+    private void setSpecialistChoiceBox(){
+        specialistChoiceBox.getItems().addAll(BookNowPanelController.getSpecialistList());
+        specialistChoiceBox.setValue("General");
+    }
+
+    //Sets the children for the doctors choiceBox
+    private void setDoctorChoiceBox(){
+        doctorChoiceBox.getItems().addAll(BookNowPanelController.getDoctorsList());
+    }
+
+    //Sets the children for the day choice Box
+    private  void setDayChoiceBox(){
+        dayChoiceBox.getItems().addAll(BookNowPanelController.getDateList());
+        dayChoiceBox.setValue("1");
+    }
+
+    //Sets the children for the month choice Box
+    private  void setMonthChoiceBox(){
+        monthChoiceBox.getItems().addAll(BookNowPanelController.getMonthList());
+        monthChoiceBox.setValue("JANUARY");
+    }
+
+    //Sets the children for the year choice Box
+    private  void setYearChoiceBox(){
+        yearChoiceBox.getItems().addAll(BookNowPanelController.getYearList());
+        yearChoiceBox.setValue(""+Calendar.getInstance().get(Calendar.YEAR)+"");
+    }
+
+    //Sets the children for the year choice Box
+    private  void setMinuteChoiceBox(){
+        minuteChoiceBox.getItems().addAll(BookNowPanelController.getMinutesList());
+        minuteChoiceBox.setValue("0");
+    }
+
+    //Sets the children for the year choice Box
+    private  void setHourChoiceBox(){
+        hourChoiceBox.getItems().addAll(BookNowPanelController.getHoursList());
+        hourChoiceBox.setValue("0");
+    }
+
+    private void showRecords() {
+        ObservableList<Record> list = RecordsPanelController.getRecordsList();
+
+        appointmentIdColumn.setCellValueFactory(new PropertyValueFactory<Record, Integer>("appointmentId"));
+        doctorColumn.setCellValueFactory(new PropertyValueFactory<Record, String>("doctorName"));
+        categoryColumn.setCellValueFactory(new PropertyValueFactory<Record, String>("specialist"));
+        dateColumn.setCellValueFactory(new PropertyValueFactory<Record, String>("dateDue"));
+        timeColumn.setCellValueFactory(new PropertyValueFactory<Record, String>("times"));
+        statusColumn.setCellValueFactory(new PropertyValueFactory<Record, String>("status"));
+
+        recordsTable.setItems(list);
     }
 
     private void loadSVGIcons(){
