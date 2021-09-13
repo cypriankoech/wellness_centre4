@@ -37,20 +37,16 @@ public class LoginPageController {
 
         if (WelcomePage.current_page == "docLogin") {
             userType = "doctors";
-//            WelcomePage.stage.setScene(WelcomePage.doctor_page);
-
         } else if (WelcomePage.current_page == "patientLogin") {
             userType = "patients";
-//            WelcomePage.stage.setScene(WelcomePage.patient_page);
-
         }
 
         try {
             if(loginModel.isLogin(userType,usernameField.getText(), passwordField.getText())) {
-                if (WelcomePage.current_page == "docLogin") {
+                if (userType == "doctors") {
                     WelcomePage.stage.setScene(WelcomePage.doctor_page);
 
-                } else if (WelcomePage.current_page == "patientLogin") {
+                } else if (userType == "patients") {
                     WelcomePage.stage.setScene(WelcomePage.patient_page);
 
                 }

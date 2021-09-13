@@ -7,7 +7,7 @@ public class LoginModel {
 
         Connection connection;
         public LoginModel() {
-            Connection connection = DatabaseConnection.connectDB();
+            connection = DatabaseConnection.connectDB();
             if(connection == null) {
                 System.out.println("Path is not connected");
                 System.exit(1);
@@ -26,13 +26,13 @@ public class LoginModel {
         public boolean isLogin(String userType, String user, String pass) throws SQLException {
             PreparedStatement preparedStatment = null;
             ResultSet resultSet= null;
-            String query = "select * from ? where username = ? and password = ?";
+            String query = "select * from "+ userType +" where username = ? and password = ?";
+//            System.out.println("select * from "+ userType + " where username = "+ user +" and password = "+ pass);
             try {
 
                 preparedStatment = connection.prepareStatement(query);
-                preparedStatment.setString(1, userType);
-                preparedStatment.setString(2, user);
-                preparedStatment.setString(3, pass);
+                preparedStatment.setString(1, user);
+                preparedStatment.setString(2, pass);
                 resultSet = preparedStatment.executeQuery();
                 if(resultSet.next()) {
                     return true;
