@@ -1,11 +1,11 @@
 package com.oopii.wellness_centre4;
 
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
-import javafx.scene.control.ChoiceBox;
-import javafx.scene.control.Label;
+import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.Region;
 import javafx.scene.shape.SVGPath;
@@ -116,6 +116,29 @@ public class PatientPageController implements Initializable {
     @FXML
     private Button bookBtn;
 
+    //Records Panel
+    @FXML
+    private TableView<Record> recordsTable;
+
+    @FXML
+    private TableColumn<Record, Integer> appointmentIdColumn;
+
+    @FXML
+    private TableColumn<Record, String> doctorColumn;
+
+    @FXML
+    private TableColumn<Record, String> categoryColumn;
+
+    @FXML
+    private TableColumn<Record, String> dateColumn;
+
+    @FXML
+    private TableColumn<Record, String> timeColumn;
+
+    @FXML
+    private TableColumn<Record, String> statusColumn;
+
+
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -129,6 +152,7 @@ public class PatientPageController implements Initializable {
         setYearChoiceBox();
         setMinuteChoiceBox();
         setHourChoiceBox();
+        showRecords();
     }
 
     @FXML
@@ -210,6 +234,19 @@ public class PatientPageController implements Initializable {
     private  void setHourChoiceBox(){
         hourChoiceBox.getItems().addAll(BookNowPanelController.getHoursList());
         hourChoiceBox.setValue("0");
+    }
+
+    private void showRecords() {
+        ObservableList<Record> list = RecordsPanelController.getRecordsList();
+
+        appointmentIdColumn.setCellValueFactory(new PropertyValueFactory<Record, Integer>("appointmentId"));
+        doctorColumn.setCellValueFactory(new PropertyValueFactory<Record, String>("doctorName"));
+        categoryColumn.setCellValueFactory(new PropertyValueFactory<Record, String>("specialist"));
+        dateColumn.setCellValueFactory(new PropertyValueFactory<Record, String>("dateDue"));
+        timeColumn.setCellValueFactory(new PropertyValueFactory<Record, String>("times"));
+        statusColumn.setCellValueFactory(new PropertyValueFactory<Record, String>("status"));
+
+        recordsTable.setItems(list);
     }
 
     private void loadSVGIcons(){
