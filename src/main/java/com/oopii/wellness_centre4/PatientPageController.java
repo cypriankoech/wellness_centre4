@@ -4,12 +4,13 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.Region;
 import javafx.scene.shape.SVGPath;
-import javafx.util.Pair;
 
 import java.net.URL;
+import java.util.Hashtable;
 import java.util.ResourceBundle;
 
 public class PatientPageController implements Initializable {
@@ -68,15 +69,39 @@ public class PatientPageController implements Initializable {
     private Region addressSVGRegion;
 
 
+    @FXML
+    private Label nameLabel;
+
+    @FXML
+    private Label patientIdLabel;
+
+    @FXML
+    private Label phoneNumberLabel;
+
+    @FXML
+    private Label emailAddressLabel;
+
+    @FXML
+    private Label addressLabel;
+
+    @FXML
+    private Label dobLabel;
+
+    @FXML
+    private Label genderLabel;
+
+
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
 
         loadSVGIcons();
+        loadProfileData();
     }
 
     @FXML
     //To change the various panels for the various actions that can be performed
-    void handleMenuButtonActions(ActionEvent event) {
+    private void handleMenuButtonActions(ActionEvent event) {
         if(event.getSource() == profilesBtn){
             profilePane.toFront();
         } else if(event.getSource() == bookNowBtn){
@@ -86,7 +111,20 @@ public class PatientPageController implements Initializable {
         }
     }
 
-    void loadSVGIcons(){
+    //Gets profile information from a function in PatientProfilePanelController class
+    private void loadProfileData(){
+        Hashtable profileData;
+        profileData = PatientProfilePanelController.getProfileData();
+
+        nameLabel.setText((String) profileData.get("firstname") + " " + profileData.get("lastname"));
+        genderLabel.setText((String) profileData.get("gender"));
+        dobLabel.setText((String) profileData.get("dob"));
+        patientIdLabel.setText((String) profileData.get("patientId"));
+        phoneNumberLabel.setText((String) profileData.get("phoneNumber"));
+        emailAddressLabel.setText((String) profileData.get("email"));
+    }
+
+    private void loadSVGIcons(){
         //First intialize the SVGs
         //User Icon
         SVGPath userIcon = new SVGPath();
