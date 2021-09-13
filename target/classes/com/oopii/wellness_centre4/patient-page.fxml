@@ -6,7 +6,6 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
-<?import javafx.scene.effect.Bloom?>
 <?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
@@ -19,92 +18,6 @@
    <children>
       <AnchorPane layoutX="226.0" prefHeight="600.0" prefWidth="575.0" style="-fx-background-color: #FFF;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="226.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Pane fx:id="bookNowPane" prefHeight="600.0" prefWidth="575.0" style="-fx-background-color: #F5F8F7;" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-               <children>
-                  <ChoiceBox layoutX="109.0" layoutY="220.0" prefHeight="25.0" prefWidth="357.0">
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                  </ChoiceBox>
-                  <ChoiceBox layoutX="109.0" layoutY="120.0" prefHeight="25.0" prefWidth="178.0">
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                     <effect>
-                        <Bloom />
-                     </effect>
-                  </ChoiceBox>
-                  <Label layoutX="109.0" layoutY="80.0" prefHeight="25.0" prefWidth="357.0" text="Specialist">
-                     <font>
-                        <Font name="Arial" size="15.0" />
-                     </font>
-                  </Label>
-                  <ChoiceBox layoutX="110.0" layoutY="340.0" prefHeight="25.0" prefWidth="63.0">
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                  </ChoiceBox>
-                  <ChoiceBox layoutX="395.0" layoutY="340.0" prefHeight="25.0" prefWidth="72.0">
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                  </ChoiceBox>
-                  <ChoiceBox layoutX="206.0" layoutY="340.0" prefHeight="25.0" prefWidth="162.0">
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                  </ChoiceBox>
-                  <Label layoutX="109.0" layoutY="315.0" prefHeight="25.0" prefWidth="63.0" text="Day" textFill="#a8a8a8">
-                     <font>
-                        <Font name="Arial" size="14.0" />
-                     </font>
-                  </Label>
-                  <Label layoutX="206.0" layoutY="315.0" prefHeight="25.0" prefWidth="63.0" text="Month" textFill="#a8a8a8">
-                     <font>
-                        <Font name="Arial" size="14.0" />
-                     </font>
-                  </Label>
-                  <Label layoutX="395.0" layoutY="315.0" prefHeight="25.0" prefWidth="63.0" text="Year" textFill="#a8a8a8">
-                     <font>
-                        <Font name="Arial" size="14.0" />
-                     </font>
-                  </Label>
-                  <ChoiceBox layoutX="110.0" layoutY="460.0" prefHeight="25.0" prefWidth="63.0">
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                  </ChoiceBox>
-                  <ChoiceBox layoutX="206.0" layoutY="460.0" prefHeight="25.0" prefWidth="63.0">
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                  </ChoiceBox>
-                  <Label layoutX="109.0" layoutY="435.0" prefHeight="25.0" prefWidth="63.0" text="Hour" textFill="#a8a8a8">
-                     <font>
-                        <Font name="Arial" size="14.0" />
-                     </font>
-                  </Label>
-                  <Label layoutX="206.0" layoutY="435.0" prefHeight="25.0" prefWidth="63.0" text="Minute" textFill="#a8a8a8">
-                     <font>
-                        <Font name="Arial" size="14.0" />
-                     </font>
-                  </Label>
-                  <Label layoutX="109.0" layoutY="280.0" prefHeight="25.0" prefWidth="357.0" text="Date Due">
-                     <font>
-                        <Font name="Arial" size="15.0" />
-                     </font>
-                  </Label>
-                  <Label layoutX="109.0" layoutY="400.0" prefHeight="25.0" prefWidth="357.0" text="CommenceTime">
-                     <font>
-                        <Font name="Arial" size="15.0" />
-                     </font>
-                  </Label>
-                  <Label layoutX="109.0" layoutY="180.0" prefHeight="25.0" prefWidth="357.0" text="Doctor">
-                     <font>
-                        <Font name="Arial" size="15.0" />
-                     </font>
-                  </Label>
-               </children></Pane>
             <Pane fx:id="recordsPane" layoutX="3.0" prefHeight="600.0" prefWidth="575.0" style="-fx-background-color: #F5F8F7;" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                <children>
                   <TableView layoutX="24.0" layoutY="122.0" prefHeight="423.0" prefWidth="528.0">
@@ -165,6 +78,97 @@
                   <Line endX="100.0" layoutX="303.0" layoutY="164.0" startX="-100.0" stroke="#9a8d8d" />
                </children>
             </Pane>
+            <Pane fx:id="bookNowPane" prefHeight="600.0" prefWidth="575.0" style="-fx-background-color: #F5F8F7;" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <ChoiceBox fx:id="doctorChoiceBox" layoutX="109.0" layoutY="220.0" prefHeight="25.0" prefWidth="357.0">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ChoiceBox>
+                  <ChoiceBox fx:id="specialistChoiceBox" layoutX="109.0" layoutY="120.0" prefHeight="25.0" prefWidth="178.0">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ChoiceBox>
+                  <Label layoutX="109.0" layoutY="80.0" prefHeight="25.0" prefWidth="357.0" text="Specialist">
+                     <font>
+                        <Font name="Arial" size="15.0" />
+                     </font>
+                  </Label>
+                  <ChoiceBox fx:id="dayChoiceBox" layoutX="110.0" layoutY="340.0" maxHeight="300.0" prefHeight="25.0" prefWidth="63.0">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ChoiceBox>
+                  <ChoiceBox fx:id="yearChoiceBox" layoutX="395.0" layoutY="340.0" prefHeight="25.0" prefWidth="72.0">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ChoiceBox>
+                  <ChoiceBox fx:id="monthChoiceBox" layoutX="206.0" layoutY="340.0" prefHeight="25.0" prefWidth="162.0">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ChoiceBox>
+                  <Label layoutX="109.0" layoutY="315.0" prefHeight="25.0" prefWidth="63.0" text="Day" textFill="#a8a8a8">
+                     <font>
+                        <Font name="Arial" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="206.0" layoutY="315.0" prefHeight="25.0" prefWidth="63.0" text="Month" textFill="#a8a8a8">
+                     <font>
+                        <Font name="Arial" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="395.0" layoutY="315.0" prefHeight="25.0" prefWidth="63.0" text="Year" textFill="#a8a8a8">
+                     <font>
+                        <Font name="Arial" size="14.0" />
+                     </font>
+                  </Label>
+                  <ChoiceBox fx:id="hourChoiceBox" layoutX="110.0" layoutY="460.0" prefHeight="25.0" prefWidth="63.0">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ChoiceBox>
+                  <ChoiceBox fx:id="minuteChoiceBox" layoutX="206.0" layoutY="460.0" prefHeight="25.0" prefWidth="63.0">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ChoiceBox>
+                  <Label layoutX="109.0" layoutY="435.0" prefHeight="25.0" prefWidth="63.0" text="Hour" textFill="#a8a8a8">
+                     <font>
+                        <Font name="Arial" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="206.0" layoutY="435.0" prefHeight="25.0" prefWidth="63.0" text="Minute" textFill="#a8a8a8">
+                     <font>
+                        <Font name="Arial" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="109.0" layoutY="280.0" prefHeight="25.0" prefWidth="357.0" text="Date Due">
+                     <font>
+                        <Font name="Arial" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="109.0" layoutY="400.0" prefHeight="25.0" prefWidth="357.0" text="CommenceTime">
+                     <font>
+                        <Font name="Arial" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="109.0" layoutY="180.0" prefHeight="25.0" prefWidth="357.0" text="Doctor">
+                     <font>
+                        <Font name="Arial" size="15.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="bookBtn" alignment="CENTER" graphicTextGap="40.0" layoutX="141.0" layoutY="520.0" mnemonicParsing="false" onAction="#handleBookButtonAction" prefHeight="48.0" prefWidth="293.0" style="-fx-background-color: #00000007;" text="Book Now">
+                     <font>
+                        <Font name="Cambria" size="16.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children></Pane>
          </children>
       </AnchorPane>
       <AnchorPane prefHeight="500.0" prefWidth="220.0" style="-fx-background-color: #F0F7FF;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
